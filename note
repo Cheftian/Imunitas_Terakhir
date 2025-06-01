@@ -1,0 +1,54 @@
+DEVELOPERS LOGS 1 :
+1. Terdapat 4 Objek utama :
+    a. Sel Darah Putih
+    b. Bakteri
+    c. Kamera
+    d. Area
+    e. UI (Health Bar dan Game Over)
+
+2. Sel Darah Putih : 
+    a. Sel Darah Putih dapat membunuh bakteri (WhiteBloodCell)
+    b. Dapat bergerak mengikuti arah mouse atau drag (DragMovement)
+
+3. Bakteri :
+    a. Mekanisme nyawa bakteri/ durasi dibunuh, sesuai level (Bacteria)
+    b. Pergerakan bakteri secara random di dalam area (BacteriaMovement)
+    c. Mekanisme perkembangbiakan bakteri (BacteriaReproduction)
+        i. akan berkembangbiak dalam durasi waktu tertentu
+        2. akan mengikuti induk selama induk masih hidup secara acak
+        3. akan bergerak random saat induk mati/ mengaktifkan BacteriaMovement
+    d. Mekanisme peningkatan bakteri dengan syarat tertentu (BacteriaGrowth)
+
+4. Kamera :
+    a. Kamera dapat bergetar (CameraShake)
+
+5. Area :
+    a. Area membatasi pergerakan bakteri (BacteriaMovement)
+    b. Area mampu spawn bakteri secara random (BacteriaSpawner)
+
+6. UI :
+    a. Health Bar menampilkan nyawa global (HealthSystem)
+        i. akan berkurang  setiap detik berdasarkan jenis bakteri yang hidup
+        ii. akan bertambah tiap 10 detik
+    b. Game Over menampilkan pesan game over dan tombol restart (GameOverManager)
+
+DEVELOPERS LOGS 2 :
+1. Coin/Poin :
+    a. Didapatkan setelah membunuh bakteri
+    b. Digunakan untuk membeli Power Ups
+2. Power Ups :
+    a. Penambahan darah
+    b. Penambahan kecepatan
+    c. Penambahan regen nyawa
+    d. Penambahan ukuran
+    e. Pemanggilan rekan/ neutrofil
+ 
+3. Neutrofil:
+    a. Bergerak secara random saat tidak ada bakteri
+    b. Saat ada bakteri di dalam area, akan mengejar bakteri
+    c. Membunuh bakteri dengan berurutan/ satu persatu
+    d. Membunuh bakteri pertama yang ditemui
+
+4. Bacteria Bos :
+    a. Bakteri Resisten (Tipikal bakteri yang sulit dibunuh)
+    b. Bakteri Pembelah Cepat (Bisa berkembangbiak lebih cepat)
